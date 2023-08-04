@@ -19,8 +19,8 @@ public class PostServiceImpl implements PostService{
 		return repository.findAll();
 	}
 	
-	public Post getPost(long id) {
-		return repository.getById(id);
+	public Post getPost(Long id) {
+		return repository.findById(id).get();
 	}
 	
 	public Post createPost(String title, String author, String type) {

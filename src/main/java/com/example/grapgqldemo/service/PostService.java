@@ -6,6 +6,6 @@ import com.example.grapgqldemo.model.Post;
 
 public interface PostService {
 	public List<Post> getAllPosts();
-	public Post getPost(long id);
+	public Post getPost(Long id);
 	public Post createPost(String title, String author, String type);
 }

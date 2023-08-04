@@ -6,3 +6,26 @@ If you run in the first time application and want to see the testing data, just 
 
 # Running
 To run the application enter in the command line: `mvn spring-boot:run`
+
+
+# Querying
+Go to url:   `http://localhost:8080/graphiql`
+
+Run         queries
+
+`query {
+    posts { id, title, author, type, createdDate } 
+}
+`
+
+`
+query {
+    post(id:5) { id, author , type, createdDate},
+}
+`
+
+`
+ mutation {
+     createPost(title: "My Post Fedir", author: "Fedir", type: "programmer") {id}
+ }
+`
