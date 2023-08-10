@@ -8,6 +8,18 @@ If you run in the first time application and want to see the testing data, just 
 To run the application enter in the command line: `mvn spring-boot:run`
 
 
+# DB Setup from Scratch
+create database formular;
+create user formular  with encrypted password 'formular';
+grant all privileges on database formular to formular;
+GRANT USAGE, CREATE ON SCHEMA public TO formular;
+
+
+# Run App
+mvn clean install
+mvn spring-boot:run
+
+
 # Querying
 Go to url:   `http://localhost:8080/graphiql`
 
